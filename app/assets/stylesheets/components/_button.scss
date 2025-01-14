@@ -1,0 +1,13 @@
+.button-grn {
+  background-color: #727D73;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+  border: solid #727D73;
+
+  &:hover {
+    background-color: #AAB99A;
+    border: solid #727D73;
+  }
+}

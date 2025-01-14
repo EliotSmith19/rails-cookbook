@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   # get '/categories/:id', to: 'categories#show', as: 'category'
   # post '/categories', to: 'categories#create'
 
+  root "categories#index"
+
   resources :categories, only: [:index, :new, :show, :create] do
     resources :bookmarks, only: [:new, :create, :destroy]
   end

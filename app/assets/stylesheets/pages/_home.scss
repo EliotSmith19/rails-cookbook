@@ -1,0 +1,33 @@
+// Specific CSS for your home-page
+.container {
+  margin: 30px auto;
+  width: 75%;
+  padding: 0px;
+}
+
+.title-btn {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cat-card {
+  display: flex;
+  background-color: #727D73;
+  list-style: none;
+  margin: 20px auto;
+  width: 33%;
+  height: 150px;
+  border-radius: 25px;
+  justify-content: center;
+  align-items: center;
+
+  a {
+    color: white;
+
+    &:hover {
+      color: #AAB99A;
+    }
+  }
+}

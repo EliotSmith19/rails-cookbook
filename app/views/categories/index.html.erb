@@ -1,7 +1,20 @@
-<h1>Store your own recipes</h1>
-<%= link_to "Create a new category", new_category_path %>
-<ul>
-  <% @categories.each do |category| %>
-    <li><%= link_to category.name, category_path(category) %></li>
-  <% end %>
-</ul>
+<div class="banner">
+  <h1>Cookbook</h1>
+  <p>Save your favourite recipes</p>
+</div>
+
+<div class="container">
+  <div class="title-btn">
+    <h2>List of Categories</h2>
+    <%= link_to "New category", new_category_path, class: "button-grn" %>
+  </div>
+</div>
+
+
+<div class="container">
+  <ul class="p-0 d-flex flex-wrap">
+    <% @categories.each do |category| %>
+      <li class="cat-card"><%= link_to category.name, category_path(category) %></li>
+    <% end %>
+  </ul>
+</div>

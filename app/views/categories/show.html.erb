@@ -1,15 +1,27 @@
-<h1><%= @category.name %></h1>
-<%= link_to "Home", categories_path %>
-<%= link_to "Add new recipe",  new_category_bookmark_path(@category) %>
-<div>
-  <ul>
+<div class="banner">
+  <h1><%= @category.name %></h1>
+</div>
+
+<div class="container">
+  <div class="title-btn">
+    <h2>Recipes</h2>
+    <%= link_to "Add a recipe",  new_category_bookmark_path(@category), class: "button-grn" %>
+  </div>
+</div>
+
+
+<div class="container d-flex flex-wrap gap-1">
     <% @category.bookmarks.each do |bookmark| %>
-      <li>
-        <h3><%= bookmark.recipe.name %></h3>
-        <p><%= bookmark.recipe.description %></p>
-        <em><%= bookmark.comment %></em>
-        <p><%= bookmark.recipe.rating %>⭐</p></li>
-        <%= link_to "Delete", category_bookmark_path(@category, bookmark), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
-    <% end %>
-  </ul>
+    <div class="recipe-card">
+        <%= image_tag bookmark.recipe.image_url %>
+        <div class="recipe-info">
+          <h3><%= bookmark.recipe.name %></h3>
+          <p><%= bookmark.recipe.description %></p>
+          <em><%= bookmark.comment %></em>
+          <p><%= bookmark.recipe.rating %>⭐</p>
+          <%= link_to "Delete", category_bookmark_path(@category, bookmark), class: "button-grn", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+        </div>
+      </div>
+      <% end %>
+    </div>
 </div>
