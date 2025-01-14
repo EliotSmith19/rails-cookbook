@@ -1,11 +1,11 @@
-<div class="banner">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path('Homebanner.jpeg') %>)">
   <h1>Cookbook</h1>
-  <p>Save your favourite recipes</p>
+  <p><em>Save your favourite recipes</em></p>
 </div>
 
 <div class="container">
   <div class="title-btn">
-    <h2>List of Categories</h2>
+    <h2>Categories</h2>
     <%= link_to "New category", new_category_path, class: "button-grn" %>
   </div>
 </div>
@@ -14,7 +14,7 @@
 <div class="container">
   <ul class="p-0 d-flex flex-wrap">
     <% @categories.each do |category| %>
-      <li class="cat-card"><%= link_to category.name, category_path(category) %></li>
+      <li class="cat-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path category.photo.key %>')"><%= link_to category.name, category_path(category) %></li>
     <% end %>
   </ul>
-</div>
+</div>=

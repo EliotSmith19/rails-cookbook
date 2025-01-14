@@ -1,4 +1,4 @@
-<div class="banner">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @category.photo.key %>')">
   <h1><%= @category.name %></h1>
 </div>
 
@@ -17,9 +17,14 @@
         <div class="recipe-info">
           <h3><%= bookmark.recipe.name %></h3>
           <p><%= bookmark.recipe.description %></p>
-          <em><%= bookmark.comment %></em>
+          <em>"<%= bookmark.comment %>"</em>
+          <br></br>
           <p><%= bookmark.recipe.rating %>⭐</p>
-          <%= link_to "Delete", category_bookmark_path(@category, bookmark), class: "button-grn", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+          <%= link_to category_bookmark_path(@category, bookmark),
+            # class: "button-grn",
+            data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } do %>
+            <i class="fa-solid fa-trash"></i>
+          <% end %>
         </div>
       </div>
       <% end %>

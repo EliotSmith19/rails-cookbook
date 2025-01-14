@@ -5,4 +5,17 @@
   align-items: center;
   height: 400px;
   color: white;
+  background-size: cover;
+  background-position: center;
+
+  h1 {
+    font-size: 60px;
+    font-weight: 700;
+    text-shadow: 1px 1px 25px rgba(0, 0, 0, 0.444);
+  }
+
+  p {
+    font-size: 30px;
+    text-shadow: 1px 1px 25px rgba(0, 0, 0, 0.429);
+  }
 }
