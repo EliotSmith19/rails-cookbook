@@ -12,9 +12,11 @@
 
 
 <div class="container">
-  <ul class="p-0 d-flex flex-wrap">
+  <ul class="row p-0 d-flex">
     <% @categories.each do |category| %>
-      <li class="cat-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path category.photo.key %>')"><%= link_to category.name, category_path(category) %></li>
+      <li class="cat-card mx-2" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path category.photo.key %>')"><h3><%= link_to category.name, category_path(category) %></h3>
+        <p><em><%= category.bookmarks.count %> Recipes</em></p>
+      </li>
     <% end %>
   </ul>
-</div>=
+</div>2

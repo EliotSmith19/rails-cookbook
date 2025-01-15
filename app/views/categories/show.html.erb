@@ -10,18 +10,17 @@
 </div>
 
 
-<div class="container d-flex flex-wrap gap-1">
+<div class="container">
+  <div class="row">
     <% @category.bookmarks.each do |bookmark| %>
-    <div class="recipe-card">
+    <div class="recipe-card mx-2">
         <%= image_tag bookmark.recipe.image_url %>
         <div class="recipe-info">
           <h3><%= bookmark.recipe.name %></h3>
           <p><%= bookmark.recipe.description %></p>
-          <em>"<%= bookmark.comment %>"</em>
-          <br></br>
+          <p><em>"<%= bookmark.comment %>"</em></p>
           <p><%= bookmark.recipe.rating %>⭐</p>
           <%= link_to category_bookmark_path(@category, bookmark),
-            # class: "button-grn",
             data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } do %>
             <i class="fa-solid fa-trash"></i>
           <% end %>

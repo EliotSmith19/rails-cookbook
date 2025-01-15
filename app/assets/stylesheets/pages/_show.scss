@@ -1,14 +1,13 @@
 .recipe-card {
   background-color: rgb(255, 255, 255);
   list-style: none;
-  width: 30%;
   box-shadow: 2px 2px  25px rgba(0, 0, 0, 0.349);
   border-radius: 20px;
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
+  width: 30%;
   margin: 25px auto;
-  padding-left: 0px;
+  padding: 0px 0px;
   position: relative;
 
   img {
@@ -35,5 +34,12 @@
     &:hover {
       color: #AAB99A;
     }
+  }
+}
+
+
+@media (min-width: 200px) and (max-width: 991.98px) {
+  .recipe-card {
+    width: 100%; /* Equivalent to col-md-6 (6/12 columns) */
   }
 }
