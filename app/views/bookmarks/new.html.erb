@@ -7,10 +7,12 @@
 </div>
 
 <div class="container">
-  <%= simple_form_for [@category, @bookmark] do |f| %>
-    <%= f.association :recipe %>
-    <%= f.input :comment %>
-    <%= f.submit class: "button-grn" %>
-  <% end %>
+  <div class="my-form">
+    <%= simple_form_for [@category, @bookmark] do |f| %>
+      <%= f.association :recipe %>
+      <%= f.input :comment %>
+      <%= f.submit class: "button-grn" %>
+    <% end %>
+  </div>
 </div>
 <hr class="container">
