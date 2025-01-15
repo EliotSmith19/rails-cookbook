@@ -1,7 +1,7 @@
 .recipe-card {
   background-color: rgb(255, 255, 255);
   list-style: none;
-  box-shadow: 2px 2px  25px rgba(0, 0, 0, 0.349);
+  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.349);
   border-radius: 20px;
   display: flex;
   flex-direction: column;
@@ -23,6 +23,10 @@
 .recipe-info {
   padding: 15px 20px;
   width: 100%;
+
+  h3, p {
+    color: #727D73;
+  }
 
   i {
     color: #ffffff;
