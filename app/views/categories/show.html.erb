@@ -17,7 +17,7 @@
         <%= image_tag bookmark.recipe.image_url %>
         <div class="recipe-info">
           <h3><%= bookmark.recipe.name %></h3>
-          <p><%= bookmark.recipe.description %></p>
+          <p><%= bookmark.recipe.description.truncate(200) %></p>
           <p><em>"<%= bookmark.comment %>"</em></p>
           <p><%= bookmark.recipe.rating %>⭐</p>
           <%= link_to category_bookmark_path(@category, bookmark),
